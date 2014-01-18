@@ -31,6 +31,7 @@
 		210813F9188AD66B00921696 /* greenBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EF188AD66B00921696 /* greenBG.png */; };
 		210813FA188AD66B00921696 /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813F0188AD66B00921696 /* greenDot.png */; };
 		210813FB188AD66B00921696 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813F1188AD66B00921696 /* redDot.png */; };
+		21081405188AD96000921696 /* BalloonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081404188AD96000921696 /* BalloonView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		210813EF188AD66B00921696 /* greenBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenBG.png; sourceTree = "<group>"; };
 		210813F0188AD66B00921696 /* greenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenDot.png; sourceTree = "<group>"; };
 		210813F1188AD66B00921696 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
+		21081403188AD96000921696 /* BalloonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalloonView.h; sourceTree = "<group>"; };
+		21081404188AD96000921696 /* BalloonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalloonView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,12 +135,15 @@
 		210813B8188AD38400921696 /* BalloonsCooperation */ = {
 			isa = PBXGroup;
 			children = (
+				210813C4188AD38400921696 /* Main.storyboard */,
+				210813CA188AD38400921696 /* Images.xcassets */,
 				210813C1188AD38400921696 /* AppDelegate.h */,
 				210813C2188AD38400921696 /* AppDelegate.m */,
-				210813C4188AD38400921696 /* Main.storyboard */,
+				21081403188AD96000921696 /* BalloonView.h */,
+				21081404188AD96000921696 /* BalloonView.m */,
 				210813C7188AD38400921696 /* ViewController.h */,
 				210813C8188AD38400921696 /* ViewController.m */,
-				210813CA188AD38400921696 /* Images.xcassets */,
+				210813FC188AD6F700921696 /* Glyphs */,
 				210813E7188AD62200921696 /* Images */,
 				210813B9188AD38400921696 /* Supporting Files */,
 			);
@@ -188,6 +194,13 @@
 				210813F1188AD66B00921696 /* redDot.png */,
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		210813FC188AD6F700921696 /* Glyphs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Glyphs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +312,7 @@
 			files = (
 				210813C9188AD38400921696 /* ViewController.m in Sources */,
 				210813C3188AD38400921696 /* AppDelegate.m in Sources */,
+				21081405188AD96000921696 /* BalloonView.m in Sources */,
 				210813BF188AD38400921696 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
