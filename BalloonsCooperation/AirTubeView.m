@@ -94,6 +94,8 @@
         circleRect = CGRectMake(107.0f, 77.5f, 6.0f, 6.0f);
         circleViewFrame = CGRectMake(0, 0, 220.0f, 115.0f);
     }
+    [tubePath applyTransform:CGAffineTransformMakeScale(1.0f, 0.7f)];
+    [tubePath applyTransform:CGAffineTransformMakeTranslation(0, -22.0f)];
 	pathAnimation.path = tubePath.CGPath;
 	
 	// Set up moving circle

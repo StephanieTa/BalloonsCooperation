@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+#import "AirPumpView.h"
+
+@interface ViewController : UIViewController <AirPumpViewDelegate>
 
 @end
