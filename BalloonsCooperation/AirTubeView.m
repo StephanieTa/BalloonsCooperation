@@ -17,7 +17,6 @@
     if (self) {
         self.backgroundColor = nil;
         self.opaque = NO;
-        self.translatesAutoresizingMaskIntoConstraints = NO;
     }
     return self;
 }

@@ -56,7 +56,6 @@ static CGFloat const dotSize = 10.0f;
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        self.translatesAutoresizingMaskIntoConstraints = NO;
         self.backgroundColor = nil;
         self.opaque = NO;
         [self initIdeaView];

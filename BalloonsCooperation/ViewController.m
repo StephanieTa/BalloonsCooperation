@@ -43,6 +43,7 @@
     // Set up cloud view
     
     self.cloudView = [[CloudView alloc] init];
+    self.cloudView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.cloudView];
     [self.cloudView animateCloudView];
     
@@ -55,33 +56,40 @@
     // Set up idea view
     
     self.ideaView = [[IdeaView alloc] init];
+    self.ideaView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.cloudView addSubview:self.ideaView];
     
     // Set up air tubes
     
     self.airTubeLeft = [[AirTubeView alloc] init];
+    self.airTubeLeft.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeLeft drawAirTubeAtPosition:@"Left"];
     [self.view addSubview:self.airTubeLeft];
     
     self.airTubeCenter = [[AirTubeView alloc] init];
+    self.airTubeCenter.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeCenter drawAirTubeAtPosition:@"Center"];
     [self.view addSubview:self.airTubeCenter];
     
     self.airTubeRight = [[AirTubeView alloc] init];
+    self.airTubeRight.translatesAutoresizingMaskIntoConstraints = NO;
     [self.airTubeRight drawAirTubeAtPosition:@"Right"];
     [self.view addSubview:self.airTubeRight];
     
     // Set up air pumps
     
     self.airPumpOne = [[AirPumpView alloc] init];
+    self.airPumpOne.translatesAutoresizingMaskIntoConstraints = NO;
     self.airPumpOne.delegate = self;
     [self.view addSubview:self.airPumpOne];
     
     self.airPumpTwo = [[AirPumpView alloc] init];
+    self.airPumpTwo.translatesAutoresizingMaskIntoConstraints = NO;
     self.airPumpTwo.delegate = self;
     [self.view addSubview:self.airPumpTwo];
     
     self.airPumpThree = [[AirPumpView alloc] init];
+    self.airPumpThree.translatesAutoresizingMaskIntoConstraints = NO;
     self.airPumpThree.delegate = self;
     [self.view addSubview:self.airPumpThree];
     
