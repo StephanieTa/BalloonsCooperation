@@ -67,7 +67,7 @@
 	CAKeyframeAnimation *pathAnimation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
 	pathAnimation.calculationMode = kCAAnimationPaced;
 	pathAnimation.fillMode = kCAFillModeForwards;
-	pathAnimation.duration = 5.0;
+	pathAnimation.duration = 3.0;
     
     // Check from which airPump tap comes from to set up the path for the animation
     
@@ -81,21 +81,25 @@
         imageContext = CGSizeMake(210.0f, 115.0f);
         circleRect = CGRectMake(103.0f, 77.0f, 6.0f, 6.0f);
         circleViewFrame = CGRectMake(0, 0, 210.0f, 115.0f);
+        [tubePath applyTransform:CGAffineTransformMakeScale(1.0f, 0.7f)];
+        [tubePath applyTransform:CGAffineTransformMakeTranslation(0, -22.0f)];
     }
     else if ([position isEqualToString:@"Center"]) {
         tubePath = [UIBezierPath airTubeGlyphCenter];
         imageContext = CGSizeMake(120.0f, 115.0f);
         circleRect = CGRectMake(57.0f, 79.5f, 6.0f, 6.0f);
         circleViewFrame = CGRectMake(0, 0, 120.0f, 115.0f);
+        [tubePath applyTransform:CGAffineTransformMakeScale(1.0f, 0.7f)];
+        [tubePath applyTransform:CGAffineTransformMakeTranslation(0, -25.0f)];
     }
     else if ([position isEqualToString:@"Right"]) {
         tubePath = [UIBezierPath airTubeGlyphRight];
         imageContext = CGSizeMake(220.0f, 115.0f);
         circleRect = CGRectMake(107.0f, 77.5f, 6.0f, 6.0f);
         circleViewFrame = CGRectMake(0, 0, 220.0f, 115.0f);
+        [tubePath applyTransform:CGAffineTransformMakeScale(1.0f, 0.7f)];
+        [tubePath applyTransform:CGAffineTransformMakeTranslation(0, -23.0f)];
     }
-    [tubePath applyTransform:CGAffineTransformMakeScale(1.0f, 0.7f)];
-    [tubePath applyTransform:CGAffineTransformMakeTranslation(0, -22.0f)];
 	pathAnimation.path = tubePath.CGPath;
 	
 	// Set up moving circle

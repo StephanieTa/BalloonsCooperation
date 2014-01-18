@@ -96,7 +96,7 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[groundView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[groundView]|" options:0 metrics:nil views:views]];
     
-    // Idea views
+    // Idea view
     [self.cloudView addConstraint:
      [NSLayoutConstraint constraintWithItem:self.ideaView
                                   attribute:NSLayoutAttributeCenterX
@@ -132,7 +132,7 @@
                                                                         constant:20.0f];
     [self.cloudView addConstraints:@[self.ideaViewPositionYConstraint]];
     
-    // AirPumps with airtube
+    // AirPumps
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-40.0-[_airPumpOne(40.0)]-120.0-[_airPumpTwo(_airPumpOne)]-160.0-[_airPumpThree(==_airPumpOne)]" options:(NSLayoutFormatAlignAllBottom | NSLayoutFormatAlignAllTop) metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_airPumpOne(70.0)]-20.0-|" options:0 metrics:nil views:views]];
     
@@ -151,53 +151,27 @@
 
 - (void)didTapOnAirPump:(UIView *)airPumpView {
     
-    void (^completionBlockA)(BOOL) = ^(BOOL finished) {
-//        CGPoint position = [self.ideaView calculateNewIdeaPosition];
-//        [self.ideaView drawDotAtPoint:position withImage:[UIImage imageNamed:@"blueDot.png"]];
-//        
-//        [CATransaction begin];
-//        [CATransaction setCompletionBlock:^{
-//            if (self.ideaView.balloonHeightConstraint.constant > self.currentBalloonHeight) {
-//                self.currentBalloonHeight = self.ideaView.balloonHeightConstraint.constant;
-//                self.ideaViewPositionYConstraint.constant -= 10.0f;
-//            }
-//        }];
-    };
-    
-    void (^completionBlockB)(BOOL) = ^(BOOL finished) {
-//        CGPoint position = [self.ideaViewTwo calculateNewIdeaPosition];
-//        [self.ideaViewTwo drawDotAtPoint:position withImage:[UIImage imageNamed:@"redDot.png"]];
-//        
-//        [CATransaction begin];
-//        [CATransaction setCompletionBlock:^{
-//            if (self.ideaViewTwo.balloonHeightConstraint.constant > self.currentHeightBalloonTwo) {
-//                self.currentHeightBalloonTwo = self.ideaViewTwo.balloonHeightConstraint.constant;
-//                self.ideaViewTwoPositionYConstraint.constant -= 10.0f;
-//            }
-//        }];
-    };
-    
-    void (^completionBlockC)(BOOL) = ^(BOOL finished) {
-//        CGPoint position = [self.ideaViewThree calculateNewIdeaPosition];
-//        [self.ideaViewThree drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
-//        
-//        [CATransaction begin];
-//        [CATransaction setCompletionBlock:^{
-//            if (self.ideaViewThree.balloonHeightConstraint.constant > self.currentHeightBalloonThree) {
-//                self.currentHeightBalloonThree = self.ideaViewThree.balloonHeightConstraint.constant;
-//                self.ideaViewThreePositionYConstraint.constant -= 10.0f;
-//            }
-//        }];
+    void (^completionBlock)(BOOL) = ^(BOOL finished) {
+        CGPoint position = [self.ideaView calculateNewIdeaPosition];
+        [self.ideaView drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
+        
+        [CATransaction begin];
+        [CATransaction setCompletionBlock:^{
+            if (self.ideaView.balloonHeightConstraint.constant > self.currentBalloonHeight) {
+                self.currentBalloonHeight = self.ideaView.balloonHeightConstraint.constant;
+                self.ideaViewPositionYConstraint.constant -= 10.0f;
+            }
+        }];
     };
     
     if ([airPumpView isEqual:self.airPumpOne]) {
-        [self.airTubeLeft animateIdeaAlongAirTubeAtPosition:@"Left" completion:completionBlockA];
+        [self.airTubeLeft animateIdeaAlongAirTubeAtPosition:@"Left" completion:completionBlock];
     }
     else if ([airPumpView isEqual:self.airPumpTwo]) {
-        [self.airTubeCenter animateIdeaAlongAirTubeAtPosition:@"Center" completion:completionBlockB];
+        [self.airTubeCenter animateIdeaAlongAirTubeAtPosition:@"Center" completion:completionBlock];
     }
     else if ([airPumpView isEqual:self.airPumpThree]) {
-        [self.airTubeRight animateIdeaAlongAirTubeAtPosition:@"Right" completion:completionBlockC];
+        [self.airTubeRight animateIdeaAlongAirTubeAtPosition:@"Right" completion:completionBlock];
     }
 }
 
