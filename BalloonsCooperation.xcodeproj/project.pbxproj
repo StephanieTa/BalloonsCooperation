@@ -35,6 +35,7 @@
 		21081408188ADA5D00921696 /* AirTubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081407188ADA5D00921696 /* AirTubeView.m */; };
 		2108140F188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2108140E188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m */; };
 		21081412188ADCDA00921696 /* AirPumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081411188ADCDA00921696 /* AirPumpView.m */; };
+		21081415188ADE9E00921696 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081414188ADE9E00921696 /* CloudView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		2108140E188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AirTubeGlyph.m"; sourceTree = "<group>"; };
 		21081410188ADCDA00921696 /* AirPumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirPumpView.h; sourceTree = "<group>"; };
 		21081411188ADCDA00921696 /* AirPumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirPumpView.m; sourceTree = "<group>"; };
+		21081413188ADE9E00921696 /* CloudView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudView.h; sourceTree = "<group>"; };
+		21081414188ADE9E00921696 /* CloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +151,8 @@
 				210813CA188AD38400921696 /* Images.xcassets */,
 				210813C1188AD38400921696 /* AppDelegate.h */,
 				210813C2188AD38400921696 /* AppDelegate.m */,
+				21081413188ADE9E00921696 /* CloudView.h */,
+				21081414188ADE9E00921696 /* CloudView.m */,
 				21081403188AD96000921696 /* BalloonView.h */,
 				21081404188AD96000921696 /* BalloonView.m */,
 				21081406188ADA5D00921696 /* AirTubeView.h */,
@@ -325,6 +330,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21081415188ADE9E00921696 /* CloudView.m in Sources */,
 				21081412188ADCDA00921696 /* AirPumpView.m in Sources */,
 				210813C9188AD38400921696 /* ViewController.m in Sources */,
 				2108140F188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m in Sources */,
