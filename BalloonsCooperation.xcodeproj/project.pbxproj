@@ -34,6 +34,7 @@
 		21081405188AD96000921696 /* BalloonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081404188AD96000921696 /* BalloonView.m */; };
 		21081408188ADA5D00921696 /* AirTubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081407188ADA5D00921696 /* AirTubeView.m */; };
 		2108140F188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2108140E188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m */; };
+		21081412188ADCDA00921696 /* AirPumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081411188ADCDA00921696 /* AirPumpView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 		21081407188ADA5D00921696 /* AirTubeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirTubeView.m; sourceTree = "<group>"; };
 		2108140D188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath+AirTubeGlyph.h"; sourceTree = "<group>"; };
 		2108140E188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath+AirTubeGlyph.m"; sourceTree = "<group>"; };
+		21081410188ADCDA00921696 /* AirPumpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirPumpView.h; sourceTree = "<group>"; };
+		21081411188ADCDA00921696 /* AirPumpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirPumpView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,6 +152,8 @@
 				21081404188AD96000921696 /* BalloonView.m */,
 				21081406188ADA5D00921696 /* AirTubeView.h */,
 				21081407188ADA5D00921696 /* AirTubeView.m */,
+				21081410188ADCDA00921696 /* AirPumpView.h */,
+				21081411188ADCDA00921696 /* AirPumpView.m */,
 				210813C7188AD38400921696 /* ViewController.h */,
 				210813C8188AD38400921696 /* ViewController.m */,
 				2108140C188ADC0200921696 /* Glyphs */,
@@ -320,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21081412188ADCDA00921696 /* AirPumpView.m in Sources */,
 				210813C9188AD38400921696 /* ViewController.m in Sources */,
 				2108140F188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m in Sources */,
 				21081408188ADA5D00921696 /* AirTubeView.m in Sources */,
