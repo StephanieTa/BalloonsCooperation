@@ -23,20 +23,18 @@
 		210813DE188AD38400921696 /* BalloonsCooperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 210813DD188AD38400921696 /* BalloonsCooperationTests.m */; };
 		210813F2188AD66B00921696 /* airPumpBottomRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813E8188AD66B00921696 /* airPumpBottomRed.png */; };
 		210813F3188AD66B00921696 /* airPumpTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813E9188AD66B00921696 /* airPumpTop.png */; };
-		210813F4188AD66B00921696 /* Balloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EA188AD66B00921696 /* Balloon.png */; };
-		210813F5188AD66B00921696 /* blueDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EB188AD66B00921696 /* blueDot.png */; };
 		210813F6188AD66B00921696 /* cloudBG.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 210813EC188AD66B00921696 /* cloudBG.jpg */; };
 		210813F7188AD66B00921696 /* cloudBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813ED188AD66B00921696 /* cloudBig.png */; };
 		210813F8188AD66B00921696 /* cloudSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EE188AD66B00921696 /* cloudSmall.png */; };
 		210813F9188AD66B00921696 /* greenBG.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EF188AD66B00921696 /* greenBG.png */; };
-		210813FA188AD66B00921696 /* greenDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813F0188AD66B00921696 /* greenDot.png */; };
-		210813FB188AD66B00921696 /* redDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813F1188AD66B00921696 /* redDot.png */; };
 		21081405188AD96000921696 /* BalloonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081404188AD96000921696 /* BalloonView.m */; };
 		21081408188ADA5D00921696 /* AirTubeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081407188ADA5D00921696 /* AirTubeView.m */; };
 		2108140F188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m in Sources */ = {isa = PBXBuildFile; fileRef = 2108140E188ADC3F00921696 /* UIBezierPath+AirTubeGlyph.m */; };
 		21081412188ADCDA00921696 /* AirPumpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081411188ADCDA00921696 /* AirPumpView.m */; };
 		21081415188ADE9E00921696 /* CloudView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081414188ADE9E00921696 /* CloudView.m */; };
 		21081418188ADF6800921696 /* IdeaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081417188ADF6800921696 /* IdeaView.m */; };
+		2119E6E1188C8B330022C6B9 /* orangeBalloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E0188C8B330022C6B9 /* orangeBalloon.png */; };
+		2119E6E3188C8B810022C6B9 /* yellowDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E2188C8B810022C6B9 /* yellowDot.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,14 +69,10 @@
 		210813DD188AD38400921696 /* BalloonsCooperationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BalloonsCooperationTests.m; sourceTree = "<group>"; };
 		210813E8188AD66B00921696 /* airPumpBottomRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpBottomRed.png; sourceTree = "<group>"; };
 		210813E9188AD66B00921696 /* airPumpTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpTop.png; sourceTree = "<group>"; };
-		210813EA188AD66B00921696 /* Balloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Balloon.png; sourceTree = "<group>"; };
-		210813EB188AD66B00921696 /* blueDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueDot.png; sourceTree = "<group>"; };
 		210813EC188AD66B00921696 /* cloudBG.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cloudBG.jpg; sourceTree = "<group>"; };
 		210813ED188AD66B00921696 /* cloudBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudBig.png; sourceTree = "<group>"; };
 		210813EE188AD66B00921696 /* cloudSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudSmall.png; sourceTree = "<group>"; };
 		210813EF188AD66B00921696 /* greenBG.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenBG.png; sourceTree = "<group>"; };
-		210813F0188AD66B00921696 /* greenDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = greenDot.png; sourceTree = "<group>"; };
-		210813F1188AD66B00921696 /* redDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redDot.png; sourceTree = "<group>"; };
 		21081403188AD96000921696 /* BalloonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BalloonView.h; sourceTree = "<group>"; };
 		21081404188AD96000921696 /* BalloonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BalloonView.m; sourceTree = "<group>"; };
 		21081406188ADA5D00921696 /* AirTubeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirTubeView.h; sourceTree = "<group>"; };
@@ -91,6 +85,8 @@
 		21081414188ADE9E00921696 /* CloudView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CloudView.m; sourceTree = "<group>"; };
 		21081416188ADF6800921696 /* IdeaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IdeaView.h; sourceTree = "<group>"; };
 		21081417188ADF6800921696 /* IdeaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaView.m; sourceTree = "<group>"; };
+		2119E6E0188C8B330022C6B9 /* orangeBalloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeBalloon.png; sourceTree = "<group>"; };
+		2119E6E2188C8B810022C6B9 /* yellowDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowDot.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,14 +203,12 @@
 			children = (
 				210813E8188AD66B00921696 /* airPumpBottomRed.png */,
 				210813E9188AD66B00921696 /* airPumpTop.png */,
-				210813EA188AD66B00921696 /* Balloon.png */,
-				210813EB188AD66B00921696 /* blueDot.png */,
 				210813EC188AD66B00921696 /* cloudBG.jpg */,
 				210813ED188AD66B00921696 /* cloudBig.png */,
 				210813EE188AD66B00921696 /* cloudSmall.png */,
 				210813EF188AD66B00921696 /* greenBG.png */,
-				210813F0188AD66B00921696 /* greenDot.png */,
-				210813F1188AD66B00921696 /* redDot.png */,
+				2119E6E0188C8B330022C6B9 /* orangeBalloon.png */,
+				2119E6E2188C8B810022C6B9 /* yellowDot.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -307,16 +301,14 @@
 				210813F3188AD66B00921696 /* airPumpTop.png in Resources */,
 				210813CB188AD38400921696 /* Images.xcassets in Resources */,
 				210813F7188AD66B00921696 /* cloudBig.png in Resources */,
-				210813FA188AD66B00921696 /* greenDot.png in Resources */,
+				2119E6E1188C8B330022C6B9 /* orangeBalloon.png in Resources */,
 				210813F9188AD66B00921696 /* greenBG.png in Resources */,
 				210813F6188AD66B00921696 /* cloudBG.jpg in Resources */,
-				210813FB188AD66B00921696 /* redDot.png in Resources */,
 				210813F2188AD66B00921696 /* airPumpBottomRed.png in Resources */,
 				210813BD188AD38400921696 /* InfoPlist.strings in Resources */,
 				210813C6188AD38400921696 /* Main.storyboard in Resources */,
 				210813F8188AD66B00921696 /* cloudSmall.png in Resources */,
-				210813F4188AD66B00921696 /* Balloon.png in Resources */,
-				210813F5188AD66B00921696 /* blueDot.png in Resources */,
+				2119E6E3188C8B810022C6B9 /* yellowDot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +544,7 @@
 				210813E3188AD38400921696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		210813E4188AD38400921696 /* Build configuration list for PBXNativeTarget "BalloonsCooperationTests" */ = {
 			isa = XCConfigurationList;
@@ -560,6 +553,7 @@
 				210813E6188AD38400921696 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

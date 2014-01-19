@@ -161,7 +161,7 @@
     
     void (^completionBlock)(BOOL) = ^(BOOL finished) {
         CGPoint position = [self.ideaView calculateNewIdeaPosition];
-        [self.ideaView drawDotAtPoint:position withImage:[UIImage imageNamed:@"greenDot.png"]];
+        [self.ideaView drawDotAtPoint:position withImage:[UIImage imageNamed:@"yellowDot.png"]];
         
         [CATransaction begin];
         [CATransaction setCompletionBlock:^{
