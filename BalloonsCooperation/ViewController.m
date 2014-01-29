@@ -30,6 +30,12 @@
 @property (nonatomic, strong) NSLayoutConstraint *ideaViewPositionYConstraint;
 @property (nonatomic, assign) CGFloat currentBalloonHeight;
 
+@property (nonatomic, strong) NSDate *date;
+@property (nonatomic, strong) NSCalendar *calendar;
+@property (nonatomic) NSInteger counter;
+
+- (void)logDataFromAirTube:(AirTubeView *)airTube;
+
 @end
 
 
@@ -38,6 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.counter = 1;
     self.currentBalloonHeight = 10.0f;
     
     // Set up cloud view
@@ -63,16 +70,19 @@
     
     self.airTubeLeft = [[AirTubeView alloc] init];
     self.airTubeLeft.translatesAutoresizingMaskIntoConstraints = NO;
+    self.airTubeLeft.identification = @"Left";
     [self.airTubeLeft drawAirTubeAtPosition:@"Left"];
     [self.view addSubview:self.airTubeLeft];
     
     self.airTubeCenter = [[AirTubeView alloc] init];
     self.airTubeCenter.translatesAutoresizingMaskIntoConstraints = NO;
+    self.airTubeCenter.identification = @"Center";
     [self.airTubeCenter drawAirTubeAtPosition:@"Center"];
     [self.view addSubview:self.airTubeCenter];
     
     self.airTubeRight = [[AirTubeView alloc] init];
     self.airTubeRight.translatesAutoresizingMaskIntoConstraints = NO;
+    self.airTubeRight.identification = @"Right";
     [self.airTubeRight drawAirTubeAtPosition:@"Right"];
     [self.view addSubview:self.airTubeRight];
     
@@ -153,6 +163,7 @@
     
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|-245.0-[_airTubeRight(220.0)]" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[_airTubeRight(115.0)]-22.0-|" options:0 metrics:nil views:views]];
+    
 }
 
 #pragma mark - airPump delegate methods
@@ -174,13 +185,34 @@
     
     if ([airPumpView isEqual:self.airPumpOne]) {
         [self.airTubeLeft animateIdeaAlongAirTubeAtPosition:@"Left" completion:completionBlock];
+        [self logDataFromAirTube:self.airTubeLeft];
     }
     else if ([airPumpView isEqual:self.airPumpTwo]) {
         [self.airTubeCenter animateIdeaAlongAirTubeAtPosition:@"Center" completion:completionBlock];
+        [self logDataFromAirTube:self.airTubeCenter];
     }
     else if ([airPumpView isEqual:self.airPumpThree]) {
         [self.airTubeRight animateIdeaAlongAirTubeAtPosition:@"Right" completion:completionBlock];
+        [self logDataFromAirTube:self.airTubeRight];
     }
+}
+
+- (void)logDataFromAirTube:(AirTubeView *)airTube {
+    self.date = [NSDate date];
+    self.calendar = [NSCalendar currentCalendar];
+    NSDateComponents *components = [self.calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self.date];
+    NSInteger hour = [components hour];
+    NSInteger minute = [components minute];
+    NSInteger second = [components second];
+    
+    NSString *logFilePath = @"/Users/van/Desktop/BalloonsCooperation/BalloonsCooperation/data.txt";
+    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:logFilePath];
+    NSString *message = [NSString stringWithFormat:@"%i. Time: %i:%i:%i, AirTube: %@\n", self.counter, hour, minute, second, airTube.identification];
+    self.counter += 1;
+    
+    NSData *dataLog = [message dataUsingEncoding: NSUTF8StringEncoding];
+    [logFile seekToEndOfFile];
+    [logFile writeData:dataLog];
 }
 
 @end

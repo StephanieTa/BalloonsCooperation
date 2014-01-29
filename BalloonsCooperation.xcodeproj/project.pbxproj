@@ -35,6 +35,7 @@
 		21081418188ADF6800921696 /* IdeaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21081417188ADF6800921696 /* IdeaView.m */; };
 		2119E6E1188C8B330022C6B9 /* orangeBalloon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E0188C8B330022C6B9 /* orangeBalloon.png */; };
 		2119E6E3188C8B810022C6B9 /* yellowDot.png in Resources */ = {isa = PBXBuildFile; fileRef = 2119E6E2188C8B810022C6B9 /* yellowDot.png */; };
+		21C354B1188D98570041C40D /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C354B0188D98570041C40D /* data.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +88,7 @@
 		21081417188ADF6800921696 /* IdeaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IdeaView.m; sourceTree = "<group>"; };
 		2119E6E0188C8B330022C6B9 /* orangeBalloon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = orangeBalloon.png; sourceTree = "<group>"; };
 		2119E6E2188C8B810022C6B9 /* yellowDot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellowDot.png; sourceTree = "<group>"; };
+		21C354B0188D98570041C40D /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		210813B8188AD38400921696 /* BalloonsCooperation */ = {
 			isa = PBXGroup;
 			children = (
+				21C354B0188D98570041C40D /* data.txt */,
 				210813C4188AD38400921696 /* Main.storyboard */,
 				210813CA188AD38400921696 /* Images.xcassets */,
 				210813C1188AD38400921696 /* AppDelegate.h */,
@@ -302,6 +305,7 @@
 				210813CB188AD38400921696 /* Images.xcassets in Resources */,
 				210813F7188AD66B00921696 /* cloudBig.png in Resources */,
 				2119E6E1188C8B330022C6B9 /* orangeBalloon.png in Resources */,
+				21C354B1188D98570041C40D /* data.txt in Resources */,
 				210813F9188AD66B00921696 /* greenBG.png in Resources */,
 				210813F6188AD66B00921696 /* cloudBG.jpg in Resources */,
 				210813F2188AD66B00921696 /* airPumpBottomRed.png in Resources */,
