@@ -1,0 +1,17 @@
+
+***** Start of new user study *****
+
+1. Uhrzeit: 0:4:19, Zeitdauer: 0:1, Luftpumpe: Mitte
+2. Uhrzeit: 0:4:20, Zeitdauer: 0:2, Luftpumpe: Links
+3. Uhrzeit: 0:4:20, Zeitdauer: 0:2, Luftpumpe: Rechts
+4. Uhrzeit: 0:4:20, Zeitdauer: 0:2, Luftpumpe: Rechts
+5. Uhrzeit: 0:4:26, Zeitdauer: 0:9, Luftpumpe: Rechts
+
+***** Start of new user study *****
+
+1. Uhrzeit: 0:4:38, Zeitdauer: 0:2, Luftpumpe: Links
+2. Uhrzeit: 0:4:39, Zeitdauer: 0:3, Luftpumpe: Links
+3. Uhrzeit: 0:4:42, Zeitdauer: 0:6, Luftpumpe: Links
+4. Uhrzeit: 0:4:47, Zeitdauer: 0:11, Luftpumpe: Links
+5. Uhrzeit: 0:4:48, Zeitdauer: 0:12, Luftpumpe: Links
+6. Uhrzeit: 0:4:56, Zeitdauer: 0:20, Luftpumpe: Rechts

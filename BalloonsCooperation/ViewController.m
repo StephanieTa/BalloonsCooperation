@@ -34,6 +34,9 @@
 @property (nonatomic, strong) NSCalendar *calendar;
 @property (nonatomic) NSInteger counter;
 
+@property (nonatomic, strong) NSDate *start;
+@property (nonatomic, strong) NSDate *stop;
+
 - (void)logDataFromAirTube:(AirTubeView *)airTube;
 
 @end
@@ -46,6 +49,16 @@
     
     self.counter = 1;
     self.currentBalloonHeight = 10.0f;
+    
+    self.start = [NSDate date];
+    
+    NSString *logFilePath = @"/Users/van/Desktop/BalloonsCooperation/BalloonsCooperation/data.txt";
+    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:logFilePath];
+    NSString *message = @"\n***** Start of new user study *****\n\n";
+    
+    NSData *dataLog = [message dataUsingEncoding: NSUTF8StringEncoding];
+    [logFile seekToEndOfFile];
+    [logFile writeData:dataLog];
     
     // Set up cloud view
     
@@ -70,19 +83,19 @@
     
     self.airTubeLeft = [[AirTubeView alloc] init];
     self.airTubeLeft.translatesAutoresizingMaskIntoConstraints = NO;
-    self.airTubeLeft.identification = @"Left";
+    self.airTubeLeft.identification = @"Links";
     [self.airTubeLeft drawAirTubeAtPosition:@"Left"];
     [self.view addSubview:self.airTubeLeft];
     
     self.airTubeCenter = [[AirTubeView alloc] init];
     self.airTubeCenter.translatesAutoresizingMaskIntoConstraints = NO;
-    self.airTubeCenter.identification = @"Center";
+    self.airTubeCenter.identification = @"Mitte";
     [self.airTubeCenter drawAirTubeAtPosition:@"Center"];
     [self.view addSubview:self.airTubeCenter];
     
     self.airTubeRight = [[AirTubeView alloc] init];
     self.airTubeRight.translatesAutoresizingMaskIntoConstraints = NO;
-    self.airTubeRight.identification = @"Right";
+    self.airTubeRight.identification = @"Rechts";
     [self.airTubeRight drawAirTubeAtPosition:@"Right"];
     [self.view addSubview:self.airTubeRight];
     
@@ -198,6 +211,9 @@
 }
 
 - (void)logDataFromAirTube:(AirTubeView *)airTube {
+    
+    // Berechnung der Uhrzeit
+    
     self.date = [NSDate date];
     self.calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [self.calendar components:(NSHourCalendarUnit | NSMinuteCalendarUnit | NSSecondCalendarUnit) fromDate:self.date];
@@ -205,9 +221,19 @@
     NSInteger minute = [components minute];
     NSInteger second = [components second];
     
+    // Berechnung der Zeitdauer
+    
+    self.stop = [NSDate date];
+    NSTimeInterval timeIntervall = [self.stop timeIntervalSinceDate:self.start];
+    NSInteger timeIntervallMinutes = (int)floor(timeIntervall/60.0f);
+    NSInteger timeIntervallSeconds = (int)round(timeIntervall - timeIntervallMinutes * 60.0f);
+    NSString *timeIntervallString = [NSString stringWithFormat:@"%d:%d", timeIntervallMinutes, timeIntervallSeconds];
+    
+    // Logging
+    
     NSString *logFilePath = @"/Users/van/Desktop/BalloonsCooperation/BalloonsCooperation/data.txt";
     NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:logFilePath];
-    NSString *message = [NSString stringWithFormat:@"%i. Time: %i:%i:%i, AirTube: %@\n", self.counter, hour, minute, second, airTube.identification];
+    NSString *message = [NSString stringWithFormat:@"%i. Uhrzeit: %i:%i:%i, Zeitdauer: %@, Luftpumpe: %@\n", self.counter, hour, minute, second, timeIntervallString, airTube.identification];
     self.counter += 1;
     
     NSData *dataLog = [message dataUsingEncoding: NSUTF8StringEncoding];
