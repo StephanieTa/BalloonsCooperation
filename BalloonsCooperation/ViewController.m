@@ -52,13 +52,18 @@
     
     self.start = [NSDate date];
     
-    NSString *logFilePath = @"/Users/van/Desktop/BalloonsCooperation/BalloonsCooperation/data.txt";
-    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:logFilePath];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsDirectory = [paths objectAtIndex:0];
+    NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLogging.txt"];
     NSString *message = @"\n***** Start of new user study *****\n\n";
     
-    NSData *dataLog = [message dataUsingEncoding: NSUTF8StringEncoding];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
+        [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+    }
+    
+    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:path];
     [logFile seekToEndOfFile];
-    [logFile writeData:dataLog];
+    [logFile writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
     
     // Set up cloud view
     
@@ -225,20 +230,26 @@
     
     self.stop = [NSDate date];
     NSTimeInterval timeIntervall = [self.stop timeIntervalSinceDate:self.start];
-    NSInteger timeIntervallMinutes = (int)floor(timeIntervall/60.0f);
-    NSInteger timeIntervallSeconds = (int)round(timeIntervall - timeIntervallMinutes * 60.0f);
+    int timeIntervallMinutes = (int)floor(timeIntervall/60.0f);
+    int timeIntervallSeconds = (int)round(timeIntervall - timeIntervallMinutes * 60.0f);
     NSString *timeIntervallString = [NSString stringWithFormat:@"%d:%d", timeIntervallMinutes, timeIntervallSeconds];
     
     // Logging
     
-    NSString *logFilePath = @"/Users/van/Desktop/BalloonsCooperation/BalloonsCooperation/data.txt";
-    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:logFilePath];
-    NSString *message = [NSString stringWithFormat:@"%i. Uhrzeit: %i:%i:%i, Zeitdauer: %@, Luftpumpe: %@\n", self.counter, hour, minute, second, timeIntervallString, airTube.identification];
-    self.counter += 1;
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *docsDirectory = [paths objectAtIndex:0];
+    NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLogging.txt"];
+    NSString *message = [NSString stringWithFormat:@"%d. Uhrzeit: %d:%d:%d, Zeitdauer: %@, Luftpumpe: %@\n", (int)self.counter, (int)hour, (int)minute, (int)second, timeIntervallString, airTube.identification];
     
-    NSData *dataLog = [message dataUsingEncoding: NSUTF8StringEncoding];
+    if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
+        [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
+    }
+    
+    NSFileHandle *logFile = [NSFileHandle fileHandleForUpdatingAtPath:path];
     [logFile seekToEndOfFile];
-    [logFile writeData:dataLog];
+    [logFile writeData:[message dataUsingEncoding:NSUTF8StringEncoding]];
+
+    self.counter += 1;
 }
 
 @end
