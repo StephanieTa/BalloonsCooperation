@@ -197,8 +197,14 @@
             if (self.ideaView.balloonHeightConstraint.constant > self.currentBalloonHeight) {
                 self.currentBalloonHeight = self.ideaView.balloonHeightConstraint.constant;
                 self.ideaViewPositionYConstraint.constant -= 10.0f;
+                [self.view setNeedsUpdateConstraints];
+                
+                [UIView animateWithDuration:0.5f animations:^{
+                    [self.view layoutIfNeeded];
+                }];
             }
         }];
+        [CATransaction commit];
     };
     
     if ([airPumpView isEqual:self.airPumpOne]) {
