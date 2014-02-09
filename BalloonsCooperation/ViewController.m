@@ -74,9 +74,9 @@
     
     // Set up ground view
     
-    UIImageView *groundView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"greenBG.png"]];
-    groundView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:groundView];
+    UIImageView *grasslandView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"greenBG.png"]];
+    grasslandView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:grasslandView];
     
     // Set up idea view
     
@@ -123,14 +123,14 @@
     
     // Layout views
     
-    NSDictionary *views = NSDictionaryOfVariableBindings(_cloudView, groundView, _ideaView, _airPumpOne, _airPumpTwo, _airPumpThree, _airTubeLeft, _airTubeCenter, _airTubeRight);
+    NSDictionary *views = NSDictionaryOfVariableBindings(_cloudView, grasslandView, _ideaView, _airPumpOne, _airPumpTwo, _airPumpThree, _airTubeLeft, _airTubeCenter, _airTubeRight);
     
     // Background views
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_cloudView]|" options:0 metrics:nil views:views]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_cloudView(200.0)]" options:0 metrics:nil views:views]];
     
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[groundView]|" options:0 metrics:nil views:views]];
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[groundView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[grasslandView]|" options:0 metrics:nil views:views]];
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:[grasslandView]|" options:0 metrics:nil views:views]];
     
     // Idea view
     [self.cloudView addConstraint:
