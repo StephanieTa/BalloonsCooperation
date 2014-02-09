@@ -18,7 +18,7 @@
 
 - (void)initBallon {
     
-    UIImageView *balloonImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"orangeBalloon.png"]];
+    UIImageView *balloonImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"balloonYellow.png"]];
     balloonImageView.translatesAutoresizingMaskIntoConstraints = NO;
     [self addSubview:balloonImageView];
     
