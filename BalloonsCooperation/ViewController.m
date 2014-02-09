@@ -46,17 +46,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.counter = 1;
+
     self.currentBalloonHeight = 10.0f;
     
+    // Log start of user study
+    
+    self.counter = 1;
     self.start = [NSDate date];
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *docsDirectory = [paths objectAtIndex:0];
     NSString *path = [docsDirectory stringByAppendingPathComponent:@"dataLogging.txt"];
-    NSString *message = @"\n***** Start of new user study *****\n\n";
+    NSString *message = @"\n***** Start of new user study: Model Cooperation *****\n\n";
     
+//    [[NSFileManager defaultManager] removeItemAtPath:path error:nil];
     if (![[NSFileManager defaultManager] fileExistsAtPath:path]){
         [[NSFileManager defaultManager] createFileAtPath:path contents:nil attributes:nil];
     }
@@ -74,7 +77,7 @@
     
     // Set up ground view
     
-    UIImageView *grasslandView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"greenBG.png"]];
+    UIImageView *grasslandView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"grassland.png"]];
     grasslandView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:grasslandView];
     
