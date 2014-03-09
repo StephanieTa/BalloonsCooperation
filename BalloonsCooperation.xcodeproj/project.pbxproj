@@ -13,14 +13,11 @@
 		210813BD188AD38400921696 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 210813BB188AD38400921696 /* InfoPlist.strings */; };
 		210813BF188AD38400921696 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 210813BE188AD38400921696 /* main.m */; };
 		210813C3188AD38400921696 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 210813C2188AD38400921696 /* AppDelegate.m */; };
-		210813C6188AD38400921696 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 210813C4188AD38400921696 /* Main.storyboard */; };
 		210813C9188AD38400921696 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 210813C8188AD38400921696 /* ViewController.m */; };
 		210813CB188AD38400921696 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 210813CA188AD38400921696 /* Images.xcassets */; };
 		210813D2188AD38400921696 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210813D1188AD38400921696 /* XCTest.framework */; };
 		210813D3188AD38400921696 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210813B2188AD38400921696 /* Foundation.framework */; };
 		210813D4188AD38400921696 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 210813B6188AD38400921696 /* UIKit.framework */; };
-		210813DC188AD38400921696 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 210813DA188AD38400921696 /* InfoPlist.strings */; };
-		210813DE188AD38400921696 /* BalloonsCooperationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 210813DD188AD38400921696 /* BalloonsCooperationTests.m */; };
 		210813F3188AD66B00921696 /* airPumpTop.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813E9188AD66B00921696 /* airPumpTop.png */; };
 		210813F7188AD66B00921696 /* cloudBig.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813ED188AD66B00921696 /* cloudBig.png */; };
 		210813F8188AD66B00921696 /* cloudSmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 210813EE188AD66B00921696 /* cloudSmall.png */; };
@@ -35,7 +32,6 @@
 		214D43C018A7E61A0038D86F /* blueSky.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43BC18A7E61A0038D86F /* blueSky.png */; };
 		214D43C118A7E61A0038D86F /* grassland.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43BD18A7E61A0038D86F /* grassland.png */; };
 		214D43CB18A7ECD60038D86F /* dotLightYellow.png in Resources */ = {isa = PBXBuildFile; fileRef = 214D43CA18A7ECD60038D86F /* dotLightYellow.png */; };
-		21C354B1188D98570041C40D /* data.txt in Resources */ = {isa = PBXBuildFile; fileRef = 21C354B0188D98570041C40D /* data.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,15 +55,11 @@
 		210813C0188AD38400921696 /* BalloonsCooperation-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BalloonsCooperation-Prefix.pch"; sourceTree = "<group>"; };
 		210813C1188AD38400921696 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		210813C2188AD38400921696 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		210813C5188AD38400921696 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		210813C7188AD38400921696 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		210813C8188AD38400921696 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		210813CA188AD38400921696 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		210813D0188AD38400921696 /* BalloonsCooperationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BalloonsCooperationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		210813D1188AD38400921696 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		210813D9188AD38400921696 /* BalloonsCooperationTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BalloonsCooperationTests-Info.plist"; sourceTree = "<group>"; };
-		210813DB188AD38400921696 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		210813DD188AD38400921696 /* BalloonsCooperationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BalloonsCooperationTests.m; sourceTree = "<group>"; };
 		210813E9188AD66B00921696 /* airPumpTop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = airPumpTop.png; sourceTree = "<group>"; };
 		210813ED188AD66B00921696 /* cloudBig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudBig.png; sourceTree = "<group>"; };
 		210813EE188AD66B00921696 /* cloudSmall.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cloudSmall.png; sourceTree = "<group>"; };
@@ -88,7 +80,6 @@
 		214D43BC18A7E61A0038D86F /* blueSky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blueSky.png; sourceTree = "<group>"; };
 		214D43BD18A7E61A0038D86F /* grassland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = grassland.png; sourceTree = "<group>"; };
 		214D43CA18A7ECD60038D86F /* dotLightYellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dotLightYellow.png; sourceTree = "<group>"; };
-		21C354B0188D98570041C40D /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				210813B8188AD38400921696 /* BalloonsCooperation */,
-				210813D7188AD38400921696 /* BalloonsCooperationTests */,
 				210813B1188AD38400921696 /* Frameworks */,
 				210813B0188AD38400921696 /* Products */,
 			);
@@ -148,8 +138,6 @@
 		210813B8188AD38400921696 /* BalloonsCooperation */ = {
 			isa = PBXGroup;
 			children = (
-				21C354B0188D98570041C40D /* data.txt */,
-				210813C4188AD38400921696 /* Main.storyboard */,
 				210813CA188AD38400921696 /* Images.xcassets */,
 				210813C1188AD38400921696 /* AppDelegate.h */,
 				210813C2188AD38400921696 /* AppDelegate.m */,
@@ -179,24 +167,6 @@
 				210813BB188AD38400921696 /* InfoPlist.strings */,
 				210813BE188AD38400921696 /* main.m */,
 				210813C0188AD38400921696 /* BalloonsCooperation-Prefix.pch */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		210813D7188AD38400921696 /* BalloonsCooperationTests */ = {
-			isa = PBXGroup;
-			children = (
-				210813DD188AD38400921696 /* BalloonsCooperationTests.m */,
-				210813D8188AD38400921696 /* Supporting Files */,
-			);
-			path = BalloonsCooperationTests;
-			sourceTree = "<group>";
-		};
-		210813D8188AD38400921696 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				210813D9188AD38400921696 /* BalloonsCooperationTests-Info.plist */,
-				210813DA188AD38400921696 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -308,12 +278,10 @@
 				210813F3188AD66B00921696 /* airPumpTop.png in Resources */,
 				210813CB188AD38400921696 /* Images.xcassets in Resources */,
 				210813F7188AD66B00921696 /* cloudBig.png in Resources */,
-				21C354B1188D98570041C40D /* data.txt in Resources */,
 				210813BD188AD38400921696 /* InfoPlist.strings in Resources */,
 				214D43BE18A7E61A0038D86F /* airPumpBottomYellow.png in Resources */,
 				214D43C018A7E61A0038D86F /* blueSky.png in Resources */,
 				214D43C118A7E61A0038D86F /* grassland.png in Resources */,
-				210813C6188AD38400921696 /* Main.storyboard in Resources */,
 				210813F8188AD66B00921696 /* cloudSmall.png in Resources */,
 				214D43BF18A7E61A0038D86F /* balloonYellow.png in Resources */,
 			);
@@ -323,7 +291,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210813DC188AD38400921696 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				210813DE188AD38400921696 /* BalloonsCooperationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,22 +335,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				210813BC188AD38400921696 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
-		210813C4188AD38400921696 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				210813C5188AD38400921696 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		210813DA188AD38400921696 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				210813DB188AD38400921696 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
