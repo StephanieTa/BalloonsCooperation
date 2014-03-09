@@ -13,6 +13,7 @@
 
 @interface AirPumpView : UIView
 
+@property (nonatomic) NSString *identification;
 @property (nonatomic, weak) id <AirPumpViewDelegate> delegate;
 
 @end
