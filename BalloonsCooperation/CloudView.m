@@ -56,26 +56,36 @@
 }
 
 - (void)animateCloudView {
-    [UIImageView animateWithDuration:180.0f
-                               delay:3.0f
-                             options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseIn)
-                          animations:^{
-                              self.cloud1.transform = CGAffineTransformMakeTranslation(-668.0f, 0);
-                          } completion:NULL];
+    [self.cloud1.layer removeAllAnimations];
+    [self.cloud2.layer removeAllAnimations];
+    [self.cloud3.layer removeAllAnimations];
     
-    [UIImageView animateWithDuration:120.0f
-                               delay:7.0f
-                             options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseIn)
-                          animations:^{
-                              self.cloud2.transform = CGAffineTransformMakeTranslation(648.0f, 0);
-                          } completion:NULL];
+    CABasicAnimation *animation1 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation1.duration = 180.0;
+    animation1.beginTime = CACurrentMediaTime() + 3.0;
+    animation1.toValue = @-668.0f;
+    animation1.repeatCount = INFINITY;
+    animation1.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
     
-    [UIImageView animateWithDuration:150.0f
-                               delay:1.0f
-                             options:(UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveEaseIn)
-                          animations:^{
-                              self.cloud3.transform = CGAffineTransformMakeTranslation(-628.0f, 0);
-                          } completion:NULL];
+    [self.cloud1.layer addAnimation:animation1 forKey:nil];
+    
+    CABasicAnimation *animation2 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation2.duration = 120.0;
+    animation2.beginTime = CACurrentMediaTime() + 7.0;
+    animation2.toValue = @648.0f;
+    animation2.repeatCount = INFINITY;
+    animation2.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    
+    [self.cloud2.layer addAnimation:animation2 forKey:nil];
+    
+    CABasicAnimation *animation3 = [CABasicAnimation animationWithKeyPath:@"transform.translation.x"];
+    animation3.duration = 150.0;
+    animation3.beginTime = CACurrentMediaTime() + 1.0;
+    animation3.toValue = @-628.0f;
+    animation3.repeatCount = INFINITY;
+    animation3.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+    
+    [self.cloud3.layer addAnimation:animation3 forKey:nil];
 }
 
 @end
